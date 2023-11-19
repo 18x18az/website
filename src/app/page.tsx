@@ -4,7 +4,7 @@ export default function Home (): JSX.Element {
   return (
     <div className="w-full">
     <div style={{height:"60vh"}} className="relative m-0 p-0">
-      <Image src='/hero.jpg' sizes="100%" height={0} width={0} className="w-full object-cover h-full" alt='Teams competing'/>
+      <Image src='https://18x18images.blob.core.windows.net/images/hero.jpg' sizes="100%" height={0} width={0} className="w-full object-cover h-full" alt='Teams competing'/>
       <div className="flex flex-col absolute bottom-0 p-8 xl:p-24 bg-gradient-to-r from-black xl:from-5% h-full w-full justify-end gap-4">
       <h1 className="text-3xl xl:text-5xl font-bold text-zinc-0">18x18AZ</h1>
       <h2 className="text-2xl xl:text-5xl max-w-3xl text-zinc-200 leading-loose">Helping provide an engaging and affordable STEM experience for Arizona students</h2>
