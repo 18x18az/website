@@ -46,3 +46,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+              
+      - name: Build and deploy Container App
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          registryUrl: ghcr.io
+          containerAppName: website
+          resourceGroup: DefaultResourceGroup-WUS
+          imageToDeploy: ghcr.io/18x18az/website:${{ github.sha }}
