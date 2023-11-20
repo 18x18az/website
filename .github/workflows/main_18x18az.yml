@@ -61,6 +61,6 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           registryUrl: ${{ env.REGISTRY }}
-          containerAppName: ${{ env.IMAGE_NAME }}
+          containerAppName: website
           resourceGroup: ${{ env.RESOURCE_GROUP }}
           imageToDeploy: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
