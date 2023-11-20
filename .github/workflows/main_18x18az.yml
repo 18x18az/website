@@ -10,6 +10,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  RESOURCE_GROUP: DefaultResourceGroup-WUS
 
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
@@ -57,7 +58,7 @@ jobs:
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          registryUrl: ghcr.io
-          containerAppName: website
-          resourceGroup: DefaultResourceGroup-WUS
-          imageToDeploy: ghcr.io/18x18az/website:${{ github.sha }}
+          registryUrl: ${{ env.REGISTRY }}
+          containerAppName: ${{ env.IMAGE_NAME }}
+          resourceGroup: ${{ env.RESOURCE_GROUP }}
+          imageToDeploy: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}

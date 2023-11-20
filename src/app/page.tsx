@@ -16,7 +16,7 @@ export default function Home (): JSX.Element {
       </div>
       <div className="flex flex-col p-8 gap-4 max-w-4xl">
         <h1 className="text-3xl">VEX Robotics Competition Over Under</h1>
-        <p>VEX Robotics Competition Over Under is played on a 12’ x 12’ square field configured as seen above. Two (2) Alliances – one (1) “red” and one (1) “blue” – composed of two (2) Teams each, compete in matches consisting of a fifteen (15) second Autonomous Period, followed by a one minute and forty-five second (1:45) Driver Controlled Period.</p>
+        <p>VEX Robotics Competition Over Under is played on a 12’ x 12’ square field configured as seen above. Two Alliances – one “red” and one “blue” – composed of two Teams each, compete in matches consisting of a 15 second Autonomous Period, followed by a one minute and forty-five second Driver Controlled Period.</p>
         <p>The object of the game is to attain a higher score than the opposing Alliance by Scoring Triballs in Goals, and by Elevating at the end of the Match.</p>
         <h2>Learn More</h2>
       </div>
