@@ -44,13 +44,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }} ${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Log in to Azure
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-              
+
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
