@@ -7,6 +7,7 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   output: 'standalone',
   assetPrefix: isProd ? 'https://18x18.azureedge.net' : undefined,
+  compress: false,
   images: {
     remotePatterns: [
       {
