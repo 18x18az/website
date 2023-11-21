@@ -11,9 +11,6 @@ export default function Home (): JSX.Element {
       </div>
     </div>
     <div className="w-full flex p-4 gap-4">
-      <div className="p-8">
-      <iframe width="630" height="354" src="https://www.youtube.com/embed/dvDqEI7qO34" title="VEX Robotics Competition: Over Under | 2023 - 2024 Game" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-      </div>
       <div className="flex flex-col p-8 gap-4 max-w-4xl">
         <h1 className="text-3xl">VEX Robotics Competition Over Under</h1>
         <p>VEX Robotics Competition Over Under is played on a 12’ x 12’ square field configured as seen above. Two Alliances – one “red” and one “blue” – composed of two Teams each, compete in matches consisting of a 15 second Autonomous Period, followed by a one minute and forty-five second Driver Controlled Period.</p>
