@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { YouTube } from '../components/youtube'
 
 function HeroImage (): JSX.Element {
   return (
@@ -12,22 +13,9 @@ function HeroImage (): JSX.Element {
   )
 }
 
-function YouTube (props: { embedCode: string }): JSX.Element {
+function Link (props: { href: string, children: React.ReactNode }): JSX.Element {
   return (
-    <div className='aspect-w-16 aspect-h-9'>
-      <iframe
-        src={`https://www.youtube.com/embed/${props.embedCode}`}
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        title='Embedded youtube'
-      />
-    </div>
-  )
-}
-
-function Link(props: { href: string, children: React.ReactNode }): JSX.Element {
-  return (
-      <a className='bg-violet-9 p-2 transform transition-all duration-500 hover:scale-125 hover:outline-offset-0 inline-block outline outline-offset-4 outline-1 outline-violet-9' href={props.href} target='_blank' rel='noreferrer'>
+    <a className='bg-violet-9 p-2 transform transition-all duration-500 hover:scale-125 hover:outline-offset-0 inline-block outline outline-offset-4 outline-1 outline-violet-9' href={props.href} target='_blank' rel='noreferrer'>
       {props.children}
     </a>
   )
@@ -45,7 +33,7 @@ function CompetitionInfo (): JSX.Element {
         <Link href='https://www.vexrobotics.com/v5/competition/vrc-current-game'>This year's game</Link>
       </div>
       <div className='flex-1'>
-        <YouTube embedCode='dvDqEI7qO34' />
+        <YouTube title='VEX Over Under' embedCode='dvDqEI7qO34' />
       </div>
     </div>
   )
