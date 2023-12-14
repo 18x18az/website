@@ -4,7 +4,7 @@ import { YouTube } from '../components/youtube'
 function HeroImage (): JSX.Element {
   return (
     <div style={{ height: '60vh' }} className='relative m-0 p-0'>
-      <Image src='https://static-18x18.azureedge.net/images/hero.webp' sizes='100%' height={0} width={0} className='w-full object-cover h-full' alt='Teams competing' />
+      <Image src='https://static-18x18.azureedge.net/images/hero.webp' loading='eager' sizes='100%' height={0} width={0} className='w-full object-cover h-full' alt='Teams competing' />
       <div className='flex flex-col absolute bottom-0 p-8 xl:p-24 bg-gradient-to-r from-black xl:from-5% h-full justify-center lg:justify-end content-center w-full gap-4 lg:text-left text-center'>
         <h1 className='text-5xl lg:text-8xl font-cooper-hewitt text-violet-9 font-semibold'>18x18AZ</h1>
         <h2 className='text-2xl lg:text-5xl max-w-3xl text-slate-11 font-cooper-hewitt font-medium'>Helping provide an engaging and affordable STEM experience for Arizona students</h2>
