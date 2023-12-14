@@ -12,7 +12,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: "static-18x18.azureedge.net",
+        hostname: 'static-18x18.azureedge.net',
         port: '',
         pathname: '/images/**'
       }

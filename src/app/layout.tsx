@@ -1,8 +1,34 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const cooper = localFont({
+  src: [
+    {
+      path: '../../public/fonts/cooper-hewitt/CooperHewitt-Book.woff',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/cooper-hewitt/CooperHewitt-Medium.woff',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/cooper-hewitt/CooperHewitt-Semibold.woff',
+      weight: '600',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/cooper-hewitt/CooperHewitt-Bold.woff',
+      weight: '700',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-cooper-hewitt'
+})
 
 const APP_NAME = '18x18 Connect'
 const APP_DEFAULT_TITLE = '18x18az'
@@ -32,9 +58,9 @@ export default function RootLayout ({
 }): JSX.Element {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${cooper.variable}`}>
         {children}
-        </body>
+      </body>
     </html>
   )
 }

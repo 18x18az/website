@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,9 +11,16 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+      },
+      fontFamily: {
+        'cooper-hewitt': 'var(--font-cooper-hewitt)'
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-radix')(),
+    require('windy-radix-palette')()
+  ]
 }
 export default config

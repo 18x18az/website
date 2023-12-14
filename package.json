@@ -19,13 +19,17 @@
     "ts-standard": "^12.0.2"
   },
   "devDependencies": {
+    "@radix-ui/colors": "^3.0.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
     "prisma": "^5.5.2",
+    "tailwindcss-radix": "^2.8.0",
     "typescript": "^5",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "windy-radix-palette": "^1.0.0-rc.0"
   },
   "ts-standard": {
     "ignore": [
